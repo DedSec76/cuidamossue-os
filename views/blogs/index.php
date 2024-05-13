@@ -1,0 +1,1 @@
+<h1>Pantalla Principal de los blogs</h1>

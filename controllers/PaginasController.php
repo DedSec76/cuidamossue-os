@@ -78,16 +78,16 @@ class PaginasController {
 
             // Configurar SMTP
             $mail->isSMTP();
-            $mail->Host = $_ENV['EMAIL_HOST'];
+            $mail->Host = 'smtp-relay.brevo.com';
             $mail->SMTPAuth = true;
-            $mail->Username = $_ENV['EMAIL_USER'];
-            $mail->Password = $_ENV['EMAIL_PASS'];
+            $mail->Username = '74b22c001@smtp-brevo.com';
+            $mail->Password = 'FGYE53bZDzp2V4xm';
             $mail->SMTPSecure = 'tls';
-            $mail->Port = $_ENV['EMAIL_PORT'];
+            $mail->Port = 587;
 
             // Configurar el contenido del mail
             $mail->setFrom('serviciocliente@zerkashop.com');
-            $mail->addAddress('admin@zerkashop.com', 'zerkashop.com');
+            $mail->addAddress($respuestas->email);
             $mail->Subject = 'Tienes un Nuevo Mensaje';
 
             // Habilitar HTML

@@ -73,7 +73,7 @@ class PaginasController {
             $respuestas = $_POST['contacto'];
 
 
-            // Crear una instancia de PHPMailer
+            // Crear una instancia de mailin
             $mail = new PHPMailer();
 
             // Configurar SMTP
